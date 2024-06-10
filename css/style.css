@@ -70,90 +70,25 @@ a:focus {
 /**********************************/
 /********** Top Bar CSS ***********/
 /**********************************/
-.top-bar {
-    position: relative;
-    height: 35px;
-    background: #343148;
-}
 
-.top-bar .top-bar-left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.UpperHeader
+{
+background: #343148;
+height:35px;
+padding:0px 70px;
 }
-
-.top-bar .top-bar-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.UpperHeader a
+{
+color:white;
 }
-
-.top-bar .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 35px;
-    padding: 0 10px;
-    text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, .15);
+@media (max-width: 992px) {
+    .UpperHeader {
+        padding: 0px 0px;
+    }
 }
-
-.top-bar .text:last-child {
-    border-right: 1px solid rgba(255, 255, 255, .15);
-}
-
-.top-bar .text i {
-    font-size: 13px;
-    color: #ffffff;
-    margin-right: 5px;
-}
-
-.top-bar .text h2 {
-    color: #eeeeee;
-    font-weight: 400;
-    font-size: 13px;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-.top-bar .text p {
-    color: #eeeeee;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 0 0 5px;
-}
-
-.top-bar .social {
-    display: flex;
-    height: 35px;
-    font-size: 0;
-    justify-content: flex-end;
-}
-
-.top-bar .social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 100%;
-    font-size: 16px;
-    color: #ffffff;
-    border-right: 1px solid rgba(255, 255, 255, .15);
-}
-
-.top-bar .social a:first-child {
-    border-left: 1px solid rgba(255, 255, 255, .15);
-}
-
-.top-bar .social a:hover {
-    color: #092a49;
-    background: #ffffff;
-}
-
-@media (min-width: 992px) {
-    .top-bar {
-        padding: 0 60px;
+@media (max-width: 484px) {
+    .TopContent {
+        display:none;
     }
 }
 
@@ -203,6 +138,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
     color: #ffffff;
+	font-size:16px;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -295,8 +231,8 @@ a:focus {
 }
 
 .hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .hero .hero-text {
@@ -359,6 +295,10 @@ a:focus {
         padding: 12px 30px;
         letter-spacing: 1px;
     }
+	.hero {
+    margin-bottom: 5px;
+    padding: 30px 0;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -405,12 +345,14 @@ a:focus {
     margin-bottom: 45px;
     padding: 150px 0 50px 0;
     text-align: center;
-    background: #F7CAC9;
-}
+    background-image: url('../img/CommonBackImg.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	}
 
 .page-header h2 {
     position: relative;
-    color: #343148;
+    color:white;
     font-size: 45px;
     font-weight: 700;
 }
@@ -419,11 +361,11 @@ a:focus {
     position: relative;
     padding: 0 12px;
     font-size: 18px;
-    color: #343148;
+    color: white;
 }
 
 .page-header a:hover {
-    color: #ffffff;
+    color: white;
 }
 
 .page-header a::after {
@@ -453,12 +395,22 @@ a:focus {
 @media (max-width: 991px) {
     .page-header {
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
     padding: 50px 0 50px 0;
 }
 }
 
-
+@media (max-width: 500px) {
+.page-header {
+    height:150px;
+	}
+	}
+	@media (max-width: 440px) {
+.page-header {
+    height:110px;
+	padding: 20px 0 20px 0;
+	}
+	}
 /*******************************/
 /******* Section Header ********/
 /*******************************/
@@ -466,7 +418,7 @@ a:focus {
     position: relative;
     max-width: 600px;
     margin: 0 auto;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
 }
 
 .section-header p {
@@ -577,8 +529,8 @@ a:focus {
     text-align: center;
     margin-bottom: 30px;
     padding: 30px;
-    border: 1px solid rgba(0, 0, 0, .07);
     transition: .3s;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .service .service-item:hover,
@@ -662,7 +614,12 @@ a:focus {
     margin: 0;
     font-size: 16px;
 }
-
+@media(max-width:991px)
+{
+.service {
+    padding: 0px 0 15px 0;
+}	
+}
 
 
 /*******************************/
@@ -670,12 +627,12 @@ a:focus {
 /*******************************/
 .class {
     position: relative;
-    padding: 45px 0 15px 0;
+    padding: 0px 0 15px 0;
 }
 
 .class #class-filter {
     padding: 0;
-    margin: -15px 0 25px 0;
+    margin: -45px 0 35px 0;
     list-style: none;
     font-size: 0;
     text-align: center;
@@ -817,7 +774,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    padding: 90px 0;
+    padding: 60px 0;
     background: linear-gradient(rgba(247, 202, 201, .7), rgba(247, 202, 201, .7)), url(../img/discount-bg1.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -826,18 +783,12 @@ a:focus {
 }
 
 .discount .container {
-    max-width: 750px;
+    max-width: 100%;
     text-align: center;
 }
 
 .discount .section-header {
     margin-bottom: 20px;
-}
-
-.discount .section-header p {
-    color: #343148;
-    background: transparent;
-    font-size: 20px;
 	
 }
 
@@ -849,7 +800,15 @@ a:focus {
     color: #F32B56;
     font-size: 40px;
 }
-
+.discount .discount-text p
+{
+	
+    padding: 0px 100px;
+	 color: #343148;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+}
 .discount .discount-text .btn {
     margin-top: 10px;
     padding: 12px 20px;
@@ -870,6 +829,11 @@ a:focus {
 {
 .discount {
     padding: 80px 0;
+}
+.discount .discount-text p
+{
+	
+    padding: 0px 0px;
 }
 }
 @media (max-width: 742px)
@@ -927,7 +891,7 @@ a:focus {
 .team {
     position: relative;
     width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 35px 0 15px 0;
 }
 
 .team .team-item {
@@ -1026,7 +990,6 @@ a:focus {
     margin: 0;
 }
 
-
 /*******************************/
 /******* Testimonial CSS *******/
 /*******************************/
@@ -1041,13 +1004,13 @@ a:focus {
 
 .testimonial .testimonial-item {
     position: relative;
-    margin: 0 15px;
+    margin: 0 10px;
     text-align: center;
 }
 
 .testimonial .testimonial-img {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     z-index: 1;
 }
 
@@ -1078,12 +1041,12 @@ a:focus {
 .testimonial .testimonial-text h3 {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 19px;
 }
 
 .testimonial .testimonial-text h4 {
     color: #666666;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0;
 }
 
@@ -1256,7 +1219,7 @@ a:focus {
 /*******************************/
 /******** Portfolio CSS ********/
 /*******************************/
-.portfolio {
+/*.portfolio {
     position: relative;
     padding: 45px 0 15px 0;
 }
@@ -1313,7 +1276,7 @@ a:focus {
 .portfolio .portfolio-wrap:hover img {
     transform: rotate(5deg) scale(1.12);
 }
-
+*/
 
 /*******************************/
 /********* Contact CSS *********/
@@ -1324,13 +1287,12 @@ a:focus {
     padding: 45px 0;
 }
 
-.contact .container {
-    max-width: 900px;
-}
 
 .contact .contact-item {
     text-align: center;
     margin-bottom: 30px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding:20px;
 }
 
 .contact .contact-item i {
@@ -1829,21 +1791,19 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #000000;
-}
-
-.footer .container-fluid {
-    padding: 70px 0 0 0;
     background: linear-gradient(rgba(52, 49, 72, .9), rgba(52, 49, 72, .9)), url(../img/footer-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
+.footer .container-fluid {
+    padding: 70px 0 0 0;
+}
+
 .footer .footer-info {
     position: relative;
     width: 100%;
-    text-align: center;
 }
 
 .footer .footer-info .footer-logo {
@@ -1855,8 +1815,8 @@ a:focus {
 
 
 .footer .footer-info h6 {
-    margin-bottom: 15px;
-    margin-top: 30px;
+    margin-bottom: 5px;
+    margin-top: 11px;
     color: #ffffff;
 	text-align:left;
 }
@@ -1865,23 +1825,19 @@ a:focus {
     color: #ffffff;
 }
 
-.footer .footer-menu p {
-    color: #ffffff;
-	text-align:left;
-}
-
 .footer .footer-menu p:last-child {
     border: none;
 }
 
 .footer .footer-social {
     position: relative;
-    margin-top: 0px;
+    margin-top: 15px;
 	text-align:left;
 }
 
 .footer .footer-social a {
     display: inline-block;
+    font-size: 15px;
 }
 
 .footer .footer-social a i {
@@ -1931,8 +1887,7 @@ a:focus {
 /*css for footer navigation*/
 .foterlink
 {
-font-size: 19px;
-font-weight: 600;
+font-size: 14px;
 padding-right: 10px;
 padding-left: 2px;
 }
@@ -1943,6 +1898,7 @@ padding-left: 2px;
 	margin-bottom: 7px !important;
 	text-decoration:none;
 	color:white;
+	font-size:15px;
 }
 .f-nav a:hover{
 	color:white !important;
@@ -1956,3 +1912,88 @@ padding-left: 2px;
     }
 }
 
+/*css for main logo*/
+.MainLogo
+{
+	width:300px;
+}
+
+@media(max-width:434px)
+{
+.MainLogo
+{
+	width:200px;
+}	
+}
+
+/*Course Imgage Disappear*/
+@media(max-width:991px)
+{
+.CourseImgDisappear
+{
+	display:none;
+}
+}
+/*Course Select Button*/
+.CourseSelectBtn
+{
+	 color: #F7CAC9;
+    background:#343148;
+	margin:0px 10px;
+	padding:8px;
+	font-size:19px;
+	width:90px;
+	text-align:center;
+	display: flex;
+justify-content: center;
+align-items:center;
+}
+.CourseSelectBtn:hover
+{
+	 color: #343148;
+    background:white;
+	border:1px solid #343148;
+	cursor:pointer;
+}
+
+@media(max-width:442px)
+{
+	.CourseSelectBtn
+{
+	margin:0px 5px;
+	padding:5px;
+	font-size:12px;
+	width:60px;
+}
+}
+/*Branch Content*/
+.BranchContent
+{
+	
+}
+.BranchHead h4
+{
+	color:black;
+	font-weight:600;
+	text-align:center;
+	margin-bottom:15px;
+}
+.BranchContent h6 span
+{
+	line-height:20px;
+	word-spacing:10px;
+	font-size:20px;
+	color:black;
+	font-weight:600;
+}
+.BranchContent h6
+{
+	margin-top:20px;
+	text-align:justify;
+	line-height:23px;
+	word-spacing:10px;
+}
+.BranchContent a
+{
+	color:gray;
+}
