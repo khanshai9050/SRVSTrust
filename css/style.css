@@ -70,7 +70,9 @@ a:focus {
 /**********************************/
 /********** Top Bar CSS ***********/
 /**********************************/
-
+.top-bar {
+    background: #343148;
+}
 .UpperHeader
 {
 background: #343148;
@@ -359,7 +361,6 @@ color:white;
 
 .page-header a {
     position: relative;
-    padding: 0 12px;
     font-size: 18px;
     color: white;
 }
@@ -828,7 +829,7 @@ color:white;
 @media (max-width: 881px)
 {
 .discount {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 .discount .discount-text p
 {
@@ -836,22 +837,47 @@ color:white;
     padding: 0px 0px;
 }
 }
-@media (max-width: 742px)
+@media (max-width: 747px)
 {
 .discount {
-    padding: 60px 0;
+    padding: 20px 0;
+}
+.discount .discount-text p
+{
+    font-size: 17px;
+    font-weight: 600;
+}
+.discount .section-header {
+    margin-bottom: 0px;
+	
+}
+.discount .section-header h2 span {
+    color: #F32B56;
+    font-size: 30px;
 }
 }
 @media (max-width: 579px)
 {
 .discount {
-    padding: 40px 0;
+    padding: 10px 0;
+}
+.discount .discount-text p
+{
+    font-size: 12px;
+    font-weight: 600;
 }
 }
 @media (max-width: 482px)
 {
 .discount {
-    padding: 20px 0;
+    padding: 5px 0;
+}
+.discount .discount-text .btn {
+    margin-top: 0px;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 600;
+	height:30px;
 }
 }
 /*******************************/
@@ -1935,11 +1961,16 @@ padding-left: 2px;
 }
 }
 /*Course Select Button*/
+ .CourseMargin
+ {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+ }
 .CourseSelectBtn
 {
 	 color: #F7CAC9;
     background:#343148;
-	margin:0px 10px;
 	padding:8px;
 	font-size:19px;
 	width:90px;
@@ -1947,6 +1978,7 @@ padding-left: 2px;
 	display: flex;
 justify-content: center;
 align-items:center;
+margin-top:20px;
 }
 .CourseSelectBtn:hover
 {
@@ -1960,7 +1992,6 @@ align-items:center;
 {
 	.CourseSelectBtn
 {
-	margin:0px 5px;
 	padding:5px;
 	font-size:12px;
 	width:60px;
